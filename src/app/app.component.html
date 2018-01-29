@@ -1,0 +1,9 @@
+<h1>JM's Crytolab</h1>
+<div>
+  <div>
+    <input id="cipher" [(ngModel)]="cipher" >
+    <input id="inputMessage" [(ngModel)] ="inputMessage">
+    <button type="button" (click)="encode()">Encode</button>
+    <div *ngIf="encryptedAnswer"> Your encrypted message is: {{encryptedAnswer?}}</div>
+  </div>
+</div>
