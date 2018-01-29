@@ -1,9 +1,27 @@
 <h1>JM's Crytolab</h1>
 <div>
-  <div>
-    <input id="cipher" [(ngModel)]="cipher" >
-    <input id="inputMessage" [(ngModel)] ="inputMessage">
-    <button type="button" (click)="encode()">Encode</button>
-    <div *ngIf="encryptedAnswer"> Your encrypted message is: {{encryptedAnswer?}}</div>
+  <h2>Keyword Encryption</h2>
+  <p></p>
+  <div id="encode">
+      <label for="encodeCipher">Cipher:</label>
+    <input id="encodeCipher" [(ngModel)]="encodeCipher" >
+    <label for="inputEncodeMessage">Message:</label>
+    <input id="inputEncodeMessage" [(ngModel)] ="inputEncodeMessage">
+    <button type="button" (click)="keywordEncode()">Encode</button>
+    <div *ngIf="encryptedAnswer">
+      <p>Your encrypted message is: <b>{{encryptedAnswer}}</b></p>
+    </div>
+  </div>
+  <div id="decode">
+    <h2>Keyword Decryption</h2>
+    <p></p>
+    <label for="decodeCipher">Cipher:</label>
+    <input id="decodeCipher" [(ngModel)]="cipher" >
+    <label for="inputDecodeMessage">Message:</label>
+    <input id="inputDecodeMessage" [(ngModel)] ="inputDecodeMessage">
+    <button type="button" (click)="keywordDecode()">Decode</button>
+    <div *ngIf="decryptedAnswer">
+      <p>Your decrypted message is: <b>{{decryptedAnswer}}</b></p>
+    </div>
   </div>
 </div>
