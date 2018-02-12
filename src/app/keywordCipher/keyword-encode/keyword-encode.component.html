@@ -1,12 +1,13 @@
-<h2>Keyword Encryption</h2>
-<p></p>
-<div id="encode">
+<div>
+  <h2>Keyword Encryption</h2>
+  <div class="grid-x grid-padding-x align-justify" id="encode">
     <label for="encodeCipher">Cipher:</label>
-  <input id="encodeCipher" [(ngModel)]="encodeCipher" >
-  <label for="inputEncodeMessage">Message:</label>
-  <input id="inputEncodeMessage" [(ngModel)] ="inputEncodeMessage">
-  <button type="button" (click)="keywordEncode()">Encode</button>
-  <div *ngIf="encryptedAnswer">
-    <p>Your encrypted message is: <b>{{encryptedAnswer}}</b></p>
+    <input class="cell small-4" id="encodeCipher" [(ngModel)]="encodeCipher" >
+    <label for="inputEncodeMessage">Message:</label>
+    <input class="cell small-4" id="inputEncodeMessage" [(ngModel)] ="inputEncodeMessage">
+    <button type="button" (click)="keywordEncode()">Encode</button>
+    <div class="answer" *ngIf="encryptedAnswer">
+      <p>Your encrypted message is: <b>{{encryptedAnswer}}</b></p>
+    </div>
   </div>
 </div>

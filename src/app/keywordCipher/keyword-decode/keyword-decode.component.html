@@ -1,12 +1,13 @@
-<div id="decode">
+<div>
   <h2>Keyword Decryption</h2>
-  <p></p>
+  <div class="grid-x grid-padding-x align-justify">
   <label for="decodeCipher">Cipher:</label>
-  <input id="decodeCipher" [(ngModel)]="decodeCipher" >
+  <input class="cell small-4" id="decodeCipher" [(ngModel)]="decodeCipher" >
   <label for="inputDecodeMessage">Message:</label>
-  <input id="inputDecodeMessage" [(ngModel)] ="inputDecodeMessage">
+  <input class="cell small-4" id="inputDecodeMessage" [(ngModel)] ="inputDecodeMessage">
   <button type="button" (click)="keywordDecode()">Decode</button>
-  <div *ngIf="decryptedAnswer">
+  <div class="answer" *ngIf="decryptedAnswer">
     <p>Your decrypted message is: <b>{{decryptedAnswer}}</b></p>
   </div>
+</div>
 </div>

@@ -4,7 +4,7 @@ import { CodeService} from '../../services/code.service';
 @Component({
   selector: 'app-keyword-encode',
   templateUrl: './keyword-encode.component.html',
-  styleUrls: ['./keyword-encode.component.css']
+  styleUrls: ['./keyword-encode.component.scss']
 })
 export class KeywordEncodeComponent implements OnInit {
   alphabet: string[];

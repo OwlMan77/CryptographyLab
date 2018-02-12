@@ -1,14 +1,19 @@
+<div class="grid-container">
 <h1>JM's Crytolab</h1>
 
-<select (change)="check()" [(ngModel)]="codeSelect">
+<label *ngIf="!codeSelect" for="codeSelect">Please select a mode</label>
+<select id="codeSelect" (change)="check()" [(ngModel)]="codeSelect">
   <option value="option" disabled selected>Select your option</option>
   <option value="keywordEncode">Keyword Encryption</option>
   <option value="keywordDecode">Keyword Decryption</option>
 </select>
 
+<div>
   <div *ngIf="codeSelect === 'keywordEncode'">
     <app-keyword-encode></app-keyword-encode>
   </div>
   <div *ngIf="codeSelect === 'keywordDecode'">
     <app-keyword-decode></app-keyword-decode>
   </div>
+</div>
+</div>

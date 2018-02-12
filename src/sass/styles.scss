@@ -1,0 +1,39 @@
+/* You can add global styles to this file, and also import other style files */
+
+/* General variables*/
+@import './variables';
+@import './mixins';
+
+/* Colours*/
+@import './colours/colours';
+
+/* Fonts*/
+@import './fonts/fonts';
+
+body{
+  background-color: $black !important;
+  color: $light-red;
+}
+
+label{
+  color: $light-red;
+}
+
+button{
+  color: $light-red;
+  border: 1px solid $red;
+  padding: 10px;
+}
+
+button:hover{
+    background-color: $red;
+    color: $black;
+  }
+
+.answer{
+  p{
+    b{
+      font-family: $orbitron !important;
+    }
+  }
+}

@@ -4,7 +4,7 @@ import {CodeService} from '../../services/code.service';
 @Component({
   selector: 'app-keyword-decode',
   templateUrl: './keyword-decode.component.html',
-  styleUrls: ['./keyword-decode.component.css']
+  styleUrls: ['./keyword-decode.component.scss']
 })
 export class KeywordDecodeComponent implements OnInit {
   inputDecodeMessage: string;
