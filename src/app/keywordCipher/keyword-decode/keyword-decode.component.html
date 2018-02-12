@@ -1,0 +1,12 @@
+<div id="decode">
+  <h2>Keyword Decryption</h2>
+  <p></p>
+  <label for="decodeCipher">Cipher:</label>
+  <input id="decodeCipher" [(ngModel)]="decodeCipher" >
+  <label for="inputDecodeMessage">Message:</label>
+  <input id="inputDecodeMessage" [(ngModel)] ="inputDecodeMessage">
+  <button type="button" (click)="keywordDecode()">Decode</button>
+  <div *ngIf="decryptedAnswer">
+    <p>Your decrypted message is: <b>{{decryptedAnswer}}</b></p>
+  </div>
+</div>

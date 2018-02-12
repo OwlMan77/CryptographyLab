@@ -1,0 +1,12 @@
+<h2>Keyword Encryption</h2>
+<p></p>
+<div id="encode">
+    <label for="encodeCipher">Cipher:</label>
+  <input id="encodeCipher" [(ngModel)]="encodeCipher" >
+  <label for="inputEncodeMessage">Message:</label>
+  <input id="inputEncodeMessage" [(ngModel)] ="inputEncodeMessage">
+  <button type="button" (click)="keywordEncode()">Encode</button>
+  <div *ngIf="encryptedAnswer">
+    <p>Your encrypted message is: <b>{{encryptedAnswer}}</b></p>
+  </div>
+</div>
