@@ -34,8 +34,8 @@ export class KeywordEncodeComponent implements OnInit {
         // clears previous input
         this.clear();
 
-        // split our word up into letters
-        const cipherArray = this.encodeCipher.split('');
+        // split our word up into letters and remove duplicates
+        const cipherArray = this.codeService.uniqueArray(this.encodeCipher.split(''));
 
         // set new alphabet to use cipher
       this.encryptedAlphabet = this.alphabet.filter((letter) => {
@@ -57,8 +57,6 @@ export class KeywordEncodeComponent implements OnInit {
           this.answerIndexArray.push(' ');
        }
       });
-
-      console.log(this.answerIndexArray);
 
         // pushes each new letter into a final message array
       this.answerIndexArray.forEach((index) => {

@@ -35,9 +35,10 @@ export class KeywordDecodeComponent implements OnInit {
         // clears previous input
         this.clear();
 
-        // split our word up into letters
-        const cipherArray = this.decodeCipher.split('');
+        // split our word up into letters remove duplicates
+        const cipherArray = this.codeService.uniqueArray(this.decodeCipher.split(''));
 
+        console.log(cipherArray);
         // set new alphabet to use cipher
       this.encryptedAlphabet = this.alphabet.filter((letter) => {
         return cipherArray.indexOf(letter) < 0;
@@ -73,6 +74,7 @@ export class KeywordDecodeComponent implements OnInit {
       this.decryptedAnswer = this.decodeAnswerArray.join('');
     }
   }
+
 
   clear() {
     this.encryptedAlphabet = [];
